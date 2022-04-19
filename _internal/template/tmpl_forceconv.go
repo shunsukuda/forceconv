@@ -14,7 +14,7 @@ const (
 
 {{range $T := $.TL -}}
 // Bytes to {{$T.TypeName}} Slice force convert.
-func BytesTo{{$T.TypeName}}(b []byte) []{{$T.GoTypeName}} {
+func BytesTo{{$T.TypeName}}Slice(b []byte) []{{$T.GoTypeName}} {
 	if b == nil {
 		return nil
 	}
@@ -34,7 +34,7 @@ func BytesTo{{$T.TypeName}}(b []byte) []{{$T.GoTypeName}} {
 }
 
 // {{$T.TypeName}} Slice to Bytes force convert.
-func {{$T.TypeName}}sToBytes(s []{{$T.GoTypeName}}) []byte {
+func {{$T.TypeName}}SliceToBytes(s []{{$T.GoTypeName}}) []byte {
 	if s == nil {
 		return nil
 	}

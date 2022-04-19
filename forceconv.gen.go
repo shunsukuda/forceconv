@@ -22,7 +22,7 @@ const (
 )
 
 // Bytes to Bool Slice force convert.
-func BytesToBool(b []byte) []bool {
+func BytesToBoolSlice(b []byte) []bool {
 	if b == nil {
 		return nil
 	}
@@ -35,7 +35,7 @@ func BytesToBool(b []byte) []bool {
 }
 
 // Bool Slice to Bytes force convert.
-func BoolsToBytes(s []bool) []byte {
+func BoolSliceToBytes(s []bool) []byte {
 	if s == nil {
 		return nil
 	}
@@ -48,7 +48,7 @@ func BoolsToBytes(s []bool) []byte {
 }
 
 // Bytes to Int8 Slice force convert.
-func BytesToInt8(b []byte) []int8 {
+func BytesToInt8Slice(b []byte) []int8 {
 	if b == nil {
 		return nil
 	}
@@ -61,7 +61,7 @@ func BytesToInt8(b []byte) []int8 {
 }
 
 // Int8 Slice to Bytes force convert.
-func Int8sToBytes(s []int8) []byte {
+func Int8SliceToBytes(s []int8) []byte {
 	if s == nil {
 		return nil
 	}
@@ -74,7 +74,7 @@ func Int8sToBytes(s []int8) []byte {
 }
 
 // Bytes to Int16 Slice force convert.
-func BytesToInt16(b []byte) []int16 {
+func BytesToInt16Slice(b []byte) []int16 {
 	if b == nil {
 		return nil
 	}
@@ -93,7 +93,7 @@ func BytesToInt16(b []byte) []int16 {
 }
 
 // Int16 Slice to Bytes force convert.
-func Int16sToBytes(s []int16) []byte {
+func Int16SliceToBytes(s []int16) []byte {
 	if s == nil {
 		return nil
 	}
@@ -106,7 +106,7 @@ func Int16sToBytes(s []int16) []byte {
 }
 
 // Bytes to Int32 Slice force convert.
-func BytesToInt32(b []byte) []int32 {
+func BytesToInt32Slice(b []byte) []int32 {
 	if b == nil {
 		return nil
 	}
@@ -125,7 +125,7 @@ func BytesToInt32(b []byte) []int32 {
 }
 
 // Int32 Slice to Bytes force convert.
-func Int32sToBytes(s []int32) []byte {
+func Int32SliceToBytes(s []int32) []byte {
 	if s == nil {
 		return nil
 	}
@@ -138,7 +138,7 @@ func Int32sToBytes(s []int32) []byte {
 }
 
 // Bytes to Int64 Slice force convert.
-func BytesToInt64(b []byte) []int64 {
+func BytesToInt64Slice(b []byte) []int64 {
 	if b == nil {
 		return nil
 	}
@@ -157,7 +157,7 @@ func BytesToInt64(b []byte) []int64 {
 }
 
 // Int64 Slice to Bytes force convert.
-func Int64sToBytes(s []int64) []byte {
+func Int64SliceToBytes(s []int64) []byte {
 	if s == nil {
 		return nil
 	}
@@ -170,7 +170,7 @@ func Int64sToBytes(s []int64) []byte {
 }
 
 // Bytes to Uint8 Slice force convert.
-func BytesToUint8(b []byte) []uint8 {
+func BytesToUint8Slice(b []byte) []uint8 {
 	if b == nil {
 		return nil
 	}
@@ -183,7 +183,7 @@ func BytesToUint8(b []byte) []uint8 {
 }
 
 // Uint8 Slice to Bytes force convert.
-func Uint8sToBytes(s []uint8) []byte {
+func Uint8SliceToBytes(s []uint8) []byte {
 	if s == nil {
 		return nil
 	}
@@ -196,7 +196,7 @@ func Uint8sToBytes(s []uint8) []byte {
 }
 
 // Bytes to Uint16 Slice force convert.
-func BytesToUint16(b []byte) []uint16 {
+func BytesToUint16Slice(b []byte) []uint16 {
 	if b == nil {
 		return nil
 	}
@@ -215,7 +215,7 @@ func BytesToUint16(b []byte) []uint16 {
 }
 
 // Uint16 Slice to Bytes force convert.
-func Uint16sToBytes(s []uint16) []byte {
+func Uint16SliceToBytes(s []uint16) []byte {
 	if s == nil {
 		return nil
 	}
@@ -228,7 +228,7 @@ func Uint16sToBytes(s []uint16) []byte {
 }
 
 // Bytes to Uint32 Slice force convert.
-func BytesToUint32(b []byte) []uint32 {
+func BytesToUint32Slice(b []byte) []uint32 {
 	if b == nil {
 		return nil
 	}
@@ -247,7 +247,7 @@ func BytesToUint32(b []byte) []uint32 {
 }
 
 // Uint32 Slice to Bytes force convert.
-func Uint32sToBytes(s []uint32) []byte {
+func Uint32SliceToBytes(s []uint32) []byte {
 	if s == nil {
 		return nil
 	}
@@ -260,7 +260,7 @@ func Uint32sToBytes(s []uint32) []byte {
 }
 
 // Bytes to Uint64 Slice force convert.
-func BytesToUint64(b []byte) []uint64 {
+func BytesToUint64Slice(b []byte) []uint64 {
 	if b == nil {
 		return nil
 	}
@@ -279,7 +279,7 @@ func BytesToUint64(b []byte) []uint64 {
 }
 
 // Uint64 Slice to Bytes force convert.
-func Uint64sToBytes(s []uint64) []byte {
+func Uint64SliceToBytes(s []uint64) []byte {
 	if s == nil {
 		return nil
 	}
@@ -292,7 +292,7 @@ func Uint64sToBytes(s []uint64) []byte {
 }
 
 // Bytes to Float32 Slice force convert.
-func BytesToFloat32(b []byte) []float32 {
+func BytesToFloat32Slice(b []byte) []float32 {
 	if b == nil {
 		return nil
 	}
@@ -311,7 +311,7 @@ func BytesToFloat32(b []byte) []float32 {
 }
 
 // Float32 Slice to Bytes force convert.
-func Float32sToBytes(s []float32) []byte {
+func Float32SliceToBytes(s []float32) []byte {
 	if s == nil {
 		return nil
 	}
@@ -324,7 +324,7 @@ func Float32sToBytes(s []float32) []byte {
 }
 
 // Bytes to Float64 Slice force convert.
-func BytesToFloat64(b []byte) []float64 {
+func BytesToFloat64Slice(b []byte) []float64 {
 	if b == nil {
 		return nil
 	}
@@ -343,7 +343,7 @@ func BytesToFloat64(b []byte) []float64 {
 }
 
 // Float64 Slice to Bytes force convert.
-func Float64sToBytes(s []float64) []byte {
+func Float64SliceToBytes(s []float64) []byte {
 	if s == nil {
 		return nil
 	}
@@ -356,7 +356,7 @@ func Float64sToBytes(s []float64) []byte {
 }
 
 // Bytes to Complex64 Slice force convert.
-func BytesToComplex64(b []byte) []complex64 {
+func BytesToComplex64Slice(b []byte) []complex64 {
 	if b == nil {
 		return nil
 	}
@@ -375,7 +375,7 @@ func BytesToComplex64(b []byte) []complex64 {
 }
 
 // Complex64 Slice to Bytes force convert.
-func Complex64sToBytes(s []complex64) []byte {
+func Complex64SliceToBytes(s []complex64) []byte {
 	if s == nil {
 		return nil
 	}
@@ -388,7 +388,7 @@ func Complex64sToBytes(s []complex64) []byte {
 }
 
 // Bytes to Complex128 Slice force convert.
-func BytesToComplex128(b []byte) []complex128 {
+func BytesToComplex128Slice(b []byte) []complex128 {
 	if b == nil {
 		return nil
 	}
@@ -407,7 +407,7 @@ func BytesToComplex128(b []byte) []complex128 {
 }
 
 // Complex128 Slice to Bytes force convert.
-func Complex128sToBytes(s []complex128) []byte {
+func Complex128SliceToBytes(s []complex128) []byte {
 	if s == nil {
 		return nil
 	}
