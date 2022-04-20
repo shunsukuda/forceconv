@@ -39,6 +39,7 @@ var (
 		{TypeName: "Float64", GoTypeName: "float64", TypeKind: "Float", ZeroValue: "0.0", Sizeof: 8},
 		{TypeName: "Complex64", GoTypeName: "complex64", TypeKind: "Complex", ZeroValue: "0", Sizeof: 4},
 		{TypeName: "Complex128", GoTypeName: "complex128", TypeKind: "Complex", ZeroValue: "0", Sizeof: 8},
+		{TypeName: "String", GoTypeName: "string", TypeKind: "String", ZeroValue: "\"\"", Sizeof: 16},
 	}
 
 	tmplDataForceconv = tmplConfTypeInfoList{
