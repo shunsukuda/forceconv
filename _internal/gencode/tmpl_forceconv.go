@@ -10,50 +10,47 @@ const (
 
 const (
 	{{range $T := $.TL -}}
-		Sizeof{{$T.TypeName}} = int(unsafe.Sizeof({{$T.GoTypeName}}({{$T.ZeroValue}})))
+		SizeOf{{$T.TypeName}} = int(unsafe.Sizeof({{$T.GoTypeName}}({{$T.ZeroValue}})))
 	{{end}}
 )
 
 {{range $T := $.TL -}}
 // Bytes to {{$T.TypeName}} Slice force convert.
 func BytesTo{{$T.TypeName}}Slice(b []byte) []{{$T.GoTypeName}} {
-	{{- if eq $T.Sizeof 1}}
-	cvLen := len(b)
-	cvCap := cap(b)
+	{{- if eq $T.SizeOf 1}}
+	cvl := len(b)
+	cvc := cap(b)
 	{{- else}}
-	cvLen := int((len(b)+Sizeof{{$T.TypeName}}-1)/Sizeof{{$T.TypeName}})
-	cvCap := int(cap(b) / Sizeof{{$T.TypeName}})
-	if cvLen > cvCap {
-		cvLen = cvCap
-	}
+	cvl := int(len(b) / SizeOf{{$T.TypeName}})
+	cvc := int(cap(b) / SizeOf{{$T.TypeName}})
 	{{- end}}
 	return *(*[]{{$T.GoTypeName}})(unsafe.Pointer(&reflect.SliceHeader{
 		Data: (*reflect.SliceHeader)(unsafe.Pointer(&b)).Data,
-		Len: cvLen,
-		Cap: cvCap,
+		Len: cvl,
+		Cap: cvc,
 	}))
 }
 
 // {{$T.TypeName}} Slice to Bytes force convert.
 func {{$T.TypeName}}SliceToBytes(s []{{$T.GoTypeName}}) []byte {
-	cvLen := len(s)
-	cvCap := cap(s)
-	{{if ne $T.Sizeof 1 -}}
-	if cvLen >= int(maxInt / Sizeof{{$T.TypeName}}) {
-		cvLen = maxInt
+	cvl := len(s)
+	cvc := cap(s)
+	{{- if ne $T.SizeOf 1}}
+	if cvl >= int(maxInt / SizeOf{{$T.TypeName}}) {
+		cvl = maxInt
 	} else {
-		cvLen *= Sizeof{{$T.TypeName}}
+		cvl *= SizeOf{{$T.TypeName}}
 	}
-	if cvCap >= int(maxInt / Sizeof{{$T.TypeName}}) {
-		cvCap = maxInt
+	if cvc >= int(maxInt / SizeOf{{$T.TypeName}}) {
+		cvc = maxInt
 	} else {
-		cvCap *= Sizeof{{$T.TypeName}}
+		cvc *= SizeOf{{$T.TypeName}}
 	}
 	{{- end}}
 	return *(*[]byte)(unsafe.Pointer(&reflect.SliceHeader{
 		Data: (*reflect.SliceHeader)(unsafe.Pointer(&s)).Data,
-		Len: cvLen,
-		Cap: cvCap, 
+		Len: cvl,
+		Cap: cvc, 
 	}))
 }
 
